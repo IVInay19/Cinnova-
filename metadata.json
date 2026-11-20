@@ -1,0 +1,6 @@
+{
+  "name": "CinNova",
+  "description": "CinNova — Online movie ticket booking system with seat selection dashboard, integrated payment gateway, Express backend, and TMDB integration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

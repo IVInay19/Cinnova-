@@ -1,0 +1,64 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  /* Light Theme — Clean Editorial Paper & Cinema Crimson */
+  --bg-canvas: #f6f7f9;
+  --bg-surface: #ffffff;
+  --bg-elevated: #f0f2f5;
+  --border-subtle: #e2e5eb;
+  --text-primary: #14151a;
+  --text-secondary: #585c68;
+  --accent-primary: #e11d48;
+  --accent-primary-hover: #be123c;
+  --accent-ink: #ffffff;
+  color-scheme: light;
+}
+
+.dark {
+  /* Dark Theme — Modern Carbon Charcoal & Cinema Crimson */
+  --bg-canvas: #0e0f12;
+  --bg-surface: #16171d;
+  --bg-elevated: #1f2129;
+  --border-subtle: #2b2e39;
+  --text-primary: #f4f4f6;
+  --text-secondary: #9ca0ad;
+  --accent-primary: #e11d48;
+  --accent-primary-hover: #f43f5e;
+  --accent-ink: #ffffff;
+  color-scheme: dark;
+}
+
+@layer base {
+  html {
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: "Plus Jakarta Sans", "DM Sans", sans-serif;
+  }
+
+  .font-mono-tabular {
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
